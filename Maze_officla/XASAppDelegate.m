@@ -7,6 +7,7 @@
 //
 
 #import "XASAppDelegate.h"
+#import <SpriteKit/SpriteKit.h>
 
 @implementation XASAppDelegate
 

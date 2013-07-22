@@ -7,7 +7,8 @@
 //
 
 #import "XASViewController.h"
-
+#import <SpriteKit/SpriteKit.h>
+#import "gameScene.h"
 @interface XASViewController ()
 
 @end
@@ -17,13 +18,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"view did load");
+	SKView *spriteView=(SKView *)self.view;
+    spriteView.showsDrawCount=YES;
+    spriteView.showsNodeCount=YES;
+    spriteView.showsFPS=YES;
 }
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"view will appear");
+    gameScene* hello=[[gameScene alloc]
+                      initWithSize:CGSizeMake(768,1024)];
+    SKView *spriteView=(SKView*)self.view;
+    [spriteView presentScene:hello];
+    
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

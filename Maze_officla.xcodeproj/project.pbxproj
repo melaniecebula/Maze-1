@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90613D2F179DA3A4001EAF64 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90613D2E179DA3A4001EAF64 /* SpriteKit.framework */; };
+		90613D32179DA470001EAF64 /* gameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 90613D31179DA470001EAF64 /* gameScene.m */; };
 		90FD2DFF179D9F18002D437E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FD2DFE179D9F18002D437E /* Foundation.framework */; };
 		90FD2E01179D9F18002D437E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FD2E00179D9F18002D437E /* CoreGraphics.framework */; };
 		90FD2E03179D9F18002D437E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FD2E02179D9F18002D437E /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90613D2E179DA3A4001EAF64 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		90613D30179DA470001EAF64 /* gameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameScene.h; sourceTree = "<group>"; };
+		90613D31179DA470001EAF64 /* gameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameScene.m; sourceTree = "<group>"; };
 		90FD2DFB179D9F18002D437E /* Maze_officla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maze_officla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FD2DFE179D9F18002D437E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		90FD2E00179D9F18002D437E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90613D2F179DA3A4001EAF64 /* SpriteKit.framework in Frameworks */,
 				90FD2E01179D9F18002D437E /* CoreGraphics.framework in Frameworks */,
 				90FD2E03179D9F18002D437E /* UIKit.framework in Frameworks */,
 				90FD2DFF179D9F18002D437E /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		90FD2DFD179D9F18002D437E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90613D2E179DA3A4001EAF64 /* SpriteKit.framework */,
 				90FD2DFE179D9F18002D437E /* Foundation.framework */,
 				90FD2E00179D9F18002D437E /* CoreGraphics.framework */,
 				90FD2E02179D9F18002D437E /* UIKit.framework */,
@@ -117,6 +124,8 @@
 				90FD2E10179D9F18002D437E /* Main.storyboard */,
 				90FD2E13179D9F18002D437E /* XASViewController.h */,
 				90FD2E14179D9F18002D437E /* XASViewController.m */,
+				90613D30179DA470001EAF64 /* gameScene.h */,
+				90613D31179DA470001EAF64 /* gameScene.m */,
 				90FD2E16179D9F18002D437E /* Images.xcassets */,
 				90FD2E05179D9F18002D437E /* Supporting Files */,
 			);
@@ -252,6 +261,7 @@
 			files = (
 				90FD2E0B179D9F18002D437E /* main.m in Sources */,
 				90FD2E15179D9F18002D437E /* XASViewController.m in Sources */,
+				90613D32179DA470001EAF64 /* gameScene.m in Sources */,
 				90FD2E0F179D9F18002D437E /* XASAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +465,7 @@
 				90FD2E2F179D9F18002D437E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90FD2E30179D9F18002D437E /* Build configuration list for PBXNativeTarget "Maze_officlaTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +474,7 @@
 				90FD2E32179D9F18002D437E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
