@@ -29,7 +29,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"view will appear");
     gameScene* hello=[[gameScene alloc]
-                      initWithSize:CGSizeMake(768,1024)];
+                      initWithSize:CGSizeMake(750,1100)];
     SKView *spriteView=(SKView*)self.view;
     [spriteView presentScene:hello];
     
