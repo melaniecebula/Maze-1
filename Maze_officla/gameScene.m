@@ -34,16 +34,27 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
    
-
-}
-
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    
     for (UITouch *t in touches){
-        [t locationInNode:_player];
-        [_player.physicsBody applyForce:[t locationInNode:self] atPoint:CGPointMake(_player.position.x, _player.position.y)];
+        CGPoint controlCenter = _player.position;
+        CGPoint touchLocation = [t locationInNode:self];
+        
+        [_player.physicsBody applyForce:CGPointMake(controlCenter.x - touchLocation.x, controlCenter.y - touchLocation.y)];
         NSLog(@"movin");
     }
     
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [super touchesMoved:touches withEvent:event];
+    
+    for (UITouch *t in touches) {
+        SKAction *action = [SKAction moveTo:[t locationInNode:self] duration:0];
+        [_player runAction:action];
+    }
+
     
 }
 
@@ -53,7 +64,7 @@
    _player=[[SKSpriteNode alloc]initWithColor:[SKColor blueColor] size:CGSizeMake(25, 25)];
     _player.position=CGPointMake(300, 500);
     _player.physicsBody=[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(25, 25)];
-    _player.physicsBody.dynamic=NO;
+    _player.physicsBody.dynamic=YES;
     _player.physicsBody.usesPreciseCollisionDetection = YES;
     _player.physicsBody.mass=0.1;
     [self addChild:_player];
