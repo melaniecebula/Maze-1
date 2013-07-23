@@ -161,6 +161,7 @@
     SKNode *rect7=[[SKSpriteNode alloc]initWithColor:[SKColor blackColor] size:CGSizeMake(25, 500)];
     rect7.position=CGPointMake(rect6.position.x+200, rect6.position.y-250+12.5);
     
+    rect7.physicsBody=[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(25, 500)];
     rect7.physicsBody.usesPreciseCollisionDetection=YES;
     rect7.physicsBody.dynamic=NO;
     [_boundsArray addObject:rect7];
@@ -170,6 +171,7 @@
     SKNode *rect8=[[SKSpriteNode alloc]initWithColor:[SKColor blackColor] size:CGSizeMake(200, 25)];
     rect8.position=CGPointMake(rect7.position.x-100, rect7.position.y-250+12.5);
     
+    rect8.physicsBody=[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(200, 25)];
     rect8.physicsBody.usesPreciseCollisionDetection=YES;
     rect8.physicsBody.dynamic=NO;
     [_boundsArray addObject:rect8];
@@ -178,6 +180,8 @@
     SKNode *rect9=[[SKSpriteNode alloc]initWithColor:[SKColor blackColor] size:CGSizeMake(25, 200)];
     rect9.position=CGPointMake(rect8.position.x-100, rect8.position.y+75+12.5);
     rect9.physicsBody.usesPreciseCollisionDetection=YES;
+    
+    rect9.physicsBody=[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(25,200)];
     rect9.physicsBody.dynamic=NO;
     [_boundsArray addObject:rect9];
     [self addChild:rect9];
